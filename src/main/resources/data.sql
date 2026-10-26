@@ -2,7 +2,7 @@ INSERT INTO
     expedientes (
         id,
         numero_expediente,
-        fecha_Apertura,
+        fecha_apertura,
         nota_media_acceso
     )
 VALUES (
