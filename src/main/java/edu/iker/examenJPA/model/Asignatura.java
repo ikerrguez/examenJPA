@@ -1,5 +1,6 @@
 package edu.iker.examenJPA.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -29,7 +30,7 @@ public class Asignatura {
     private String codigo;
 
     @OneToMany(mappedBy = "asignatura")
-    private List<Matricula> matriculas;
+    private List<Matricula> matriculas= new ArrayList<>();
 
     public Asignatura() {
     }

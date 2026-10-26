@@ -1,5 +1,6 @@
 package edu.iker.examenJPA.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.annotation.Generated;
@@ -34,11 +35,11 @@ public class Estudiante {
     private String apellidos;
 
     @OneToOne (cascade = CascadeType.ALL, optional = false)
-    @JoinColumn (name = "id_expediente_academico", unique = true, nullable = false)
+    @JoinColumn (name = "id_expediente", unique = true, nullable = false)
     private ExpedienteAcademico expedienteAcademico;
 
     @OneToMany(mappedBy = "estudiante")
-    private List<Matricula> matriculas;
+    private List<Matricula> matriculas= new ArrayList<>();
 
 
     public Estudiante() {

@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity 
-@Table (name = "expedientes_academicos")
+@Table (name = "expedientes")
 
 public class ExpedienteAcademico {
 

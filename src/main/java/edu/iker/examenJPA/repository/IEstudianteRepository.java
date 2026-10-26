@@ -13,7 +13,7 @@ public interface IEstudianteRepository extends JpaRepository<Estudiante, Long> {
 
     Optional <Estudiante> findByDni(String dni);
 
-    @Query(value = "SELECT e FROM Estudiante e INNER JOIN e.matriculas m WHERE m.asignatura.id = :asignaturaId", nativeQuery = false)
+    @Query(value = "SELECT e FROM Estudiante e INNER JOIN e.matriculas m WHERE m.asignatura.id = :asignaturaId", nativeQuery = true)
     List<Estudiante> findEstudiantesByAsignaturaId(@Param("asignaturaId") Long asignaturaId);
 
     
